@@ -1,0 +1,12 @@
+jms:
+  inputQueue: ORDER_QUEUE
+  newVersionQueue: TRANSACTION_QUEUE_NEW
+  oldVersionQueue: TRANSACTION_QUEUE_OLD
+  brokerUrl: tcp://localhost:61616
+  maximumRedeliveries: 3
+  redeliveriesDelay: 1000
+activemq:
+  pooledConnectionFactory:
+      maxConnections: 10
+jmsConfiguration:
+  concurrentConsumers: 10

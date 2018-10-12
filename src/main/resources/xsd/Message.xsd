@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Message">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="TransactionType" type="xsd:string"/>
+				<xsd:element name="TransactionId" type="xsd:string"/>
+				<xsd:element name="ClientData" type="xsd:string"/>
+				<xsd:element name="ClientAddress" type="xsd:string"/>
+				<xsd:element name="PriceSum" type="xsd:double"/>
+				<xsd:element name="PromotionApplied" type="xsd:boolean"/>
+				<xsd:element name="Products" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Price" type="xsd:string"/>
+							<xsd:element name="Name" type="xsd:string"/>
+							<xsd:element name="Type" type="xsd:string"/>
+							<xsd:element name="ProductId" type="xsd:string"/>
+							<xsd:element name="Promotion" type="xsd:boolean" minOccurs="0"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="StartDate" type="xsd:time"/>
+				<xsd:element name="AdditionalData" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Type" type="xsd:string"/>
+							<xsd:element name="Position" type="xsd:int"/>
+							<xsd:element name="Identificator" type="xsd:string"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="NewVersion" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

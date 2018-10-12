@@ -1,0 +1,6 @@
+
+Ssquid:S1191"5Use classes from the Java API instead of Sun classes.(‚¤ÈÃ8ªãêŸå,
+Dsquid:S1172"&Remove these unused method parameters.(Âí°Ï8—ù½¾å,
+nsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(«Àó¥üÿÿÿÿ8–œğå,
+esquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Âí°Ï8—ù½¾å,
+Rsquid:S22019"/The return value of "orElseThrow" must be used.(µ¶Âêıÿÿÿÿ8¸Ÿğå,

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Order">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="OrderId" type="xsd:string" minOccurs="0"/>
+				<xsd:element name="Items" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Price" type="xsd:double"/>
+							<xsd:element name="Name" type="xsd:string"/>
+							<xsd:element name="Type" type="xsd:string"/>
+							<xsd:element name="ItemId" type="xsd:int"/>
+							<xsd:element name="Promotion" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="PromotionId" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Customer">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="FirstName" type="xsd:string"/>
+							<xsd:element name="LastName" type="xsd:string"/>
+							<xsd:element name="Address">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="AddressLine1" type="xsd:string"/>
+										<xsd:element name="City" type="xsd:string"/>
+										<xsd:element name="ZipCode" type="xsd:string" minOccurs="0"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Invoices" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Id" type="xsd:string"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Version" type="xsd:boolean" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
